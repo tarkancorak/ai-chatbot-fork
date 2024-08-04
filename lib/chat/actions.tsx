@@ -131,6 +131,7 @@ async function submitUserMessage(content: string) {
   //   baseURL: process.env.BASE_URL,
   //   apiKey: process.env.API_KEY
   // })
+
   const result = await streamUI({
     // model: groq('llama3-8b-8192'),
     model: openai('gpt-4o-mini'),
