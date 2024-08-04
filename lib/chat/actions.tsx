@@ -134,13 +134,15 @@ async function submitUserMessage(content: string) {
 
   const result = await streamUI({
     // model: groq('llama3-8b-8192'),
-    model: openai('gpt-4o-mini'),
+    model: openai('gpt-4o'),
 
     initial: <SpinnerMessage />,
     system: `\
     You are a stock trading conversation bot and you can help users buy stocks, step by step.
     You and the user can discuss stock prices and the user can adjust the amount of stocks they want to buy, or place an order, in the UI.
     
+    The current date is: ${new Date()}
+
     Messages inside [] means that it's a UI element or a user event. For example:
     - "[Price of AAPL = 100]" means that an interface of the stock price of AAPL is shown to the user.
     - "[User has changed the amount of AAPL to 10]" means that the user has changed the amount of AAPL to 10 in the UI.
