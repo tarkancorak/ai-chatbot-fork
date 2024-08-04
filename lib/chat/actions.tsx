@@ -8,6 +8,7 @@ import {
   streamUI,
   createStreamableValue
 } from 'ai/rsc'
+// import { createOpenAI } from '@ai-sdk/openai'
 import { openai } from '@ai-sdk/openai'
 
 import {
@@ -126,8 +127,14 @@ async function submitUserMessage(content: string) {
   let textStream: undefined | ReturnType<typeof createStreamableValue<string>>
   let textNode: undefined | React.ReactNode
 
+  // const groq = createOpenAI({
+  //   baseURL: process.env.BASE_URL,
+  //   apiKey: process.env.API_KEY
+  // })
   const result = await streamUI({
+    // model: groq('llama3-8b-8192'),
     model: openai('gpt-4o-mini'),
+
     initial: <SpinnerMessage />,
     system: `\
     You are a stock trading conversation bot and you can help users buy stocks, step by step.
