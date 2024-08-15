@@ -42,18 +42,18 @@ export function ChatPanel({
     },
     {
       heading: 'What is the price of',
-      subheading: '$DOGE right now?',
-      message: 'What is the price of $DOGE right now?'
+      subheading: 'BITCOIN right now?',
+      message: 'What is the price of BITCOIN right now?'
     },
     {
       heading: 'I would like to buy',
-      subheading: '42 $DOGE',
-      message: `I would like to buy 42 $DOGE`
+      subheading: '0.2 BTC',
+      message: `I would like to buy 0.2 BTC`
     },
     {
       heading: 'What are some',
-      subheading: `recent events about $DOGE?`,
-      message: `What are some recent events about $DOGE?`
+      subheading: `recent events about BITCOIN?`,
+      message: `What are some recent events about BITCOIN?`
     }
   ]
 
